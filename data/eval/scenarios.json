@@ -1,0 +1,1172 @@
+[
+  {
+    "scenario_id": "LONG-0001",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想搭建一条从数据清洗到可视化的数据分析流水线，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：数据相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "搭建一条从数据清洗到可视化的数据分析流水线",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0001",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯每日站会同步进度。\n助手: 好的，已记录你的偏好：每日站会同步进度。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用周报文档同步进度了。\n助手: 明白，以后以周报文档同步进度为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "每日站会同步进度",
+      "new_preference": "周报文档同步进度",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0002",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想组织一次团队外的客户需求调研，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：调研相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "组织一次团队外的客户需求调研",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "TOOL-0001",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我给导师发送周报邮件。\n助手: 好的，我调用 send_email 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "send_email",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "LONG-0003",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想为新宿舍挑选并配置一套性价比电脑设备，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：采购相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "为新宿舍挑选并配置一套性价比电脑设备",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "LONG-0004",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想策划一场 30 人规模的技术分享会，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：筹备相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "策划一场 30 人规模的技术分享会",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "TOOL-0002",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我跑一个聚合分析查询。\n助手: 好的，我调用 run_sql 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "run_sql",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "TOOL-0003",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查证一个统计概念的定义。\n助手: 好的，我调用 search_web 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "search_web",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "PREF-0002",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯邮件沟通。\n助手: 好的，已记录你的偏好：邮件沟通。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用即时消息沟通了。\n助手: 明白，以后以即时消息沟通为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "邮件沟通",
+      "new_preference": "即时消息沟通",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0004",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我跑一个聚合分析查询。\n助手: 好的，我调用 run_sql 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "run_sql",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0003",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯pytest 写单元测试。\n助手: 好的，已记录你的偏好：pytest 写单元测试。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用unittest 写单元测试了。\n助手: 明白，以后以unittest 写单元测试为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "pytest 写单元测试",
+      "new_preference": "unittest 写单元测试",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0004",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯黑咖啡。\n助手: 好的，已记录你的偏好：黑咖啡。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用拿铁了。\n助手: 明白，以后以拿铁为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "黑咖啡",
+      "new_preference": "拿铁",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0005",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查证一个统计概念的定义。\n助手: 好的，我调用 search_web 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "search_web",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0006",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我读取一份受限的报告文件。\n助手: 好的，我调用 file_read 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "file_read",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0007",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我发布一个演示服务。\n助手: 好的，我调用 deploy_service 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "deploy_service",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "PREF-0005",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Windows 办公。\n助手: 好的，已记录你的偏好：Windows 办公。\n用户: 前半段先聊这些，顺便说下我最近朋友强烈推荐试了之后觉得更好，现在改用macOS 办公了。\n助手: 明白，以后以macOS 办公为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Windows 办公",
+      "new_preference": "macOS 办公",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0006",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯黑咖啡。\n助手: 好的，已记录你的偏好：黑咖啡。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用拿铁了。\n助手: 明白，以后以拿铁为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "黑咖啡",
+      "new_preference": "拿铁",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0008",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我发布一个演示服务。\n助手: 好的，我调用 deploy_service 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "deploy_service",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "LONG-0005",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想为新宿舍挑选并配置一套性价比电脑设备，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：采购相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "为新宿舍挑选并配置一套性价比电脑设备",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "PREF-0007",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯浅色主题。\n助手: 好的，已记录你的偏好：浅色主题。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用深色主题了。\n助手: 明白，以后以深色主题为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "浅色主题",
+      "new_preference": "深色主题",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0008",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Jira 管理任务。\n助手: 好的，已记录你的偏好：Jira 管理任务。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用看板便签管理任务了。\n助手: 明白，以后以看板便签管理任务为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Jira 管理任务",
+      "new_preference": "看板便签管理任务",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0009",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Windows 办公。\n助手: 好的，已记录你的偏好：Windows 办公。\n用户: 前半段先聊这些，顺便说下我最近项目要求必须换，现在改用macOS 办公了。\n助手: 明白，以后以macOS 办公为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Windows 办公",
+      "new_preference": "macOS 办公",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0006",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想组织一次团队外的客户需求调研，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：调研相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "组织一次团队外的客户需求调研",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0009",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0010",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯浅色主题。\n助手: 好的，已记录你的偏好：浅色主题。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用深色主题了。\n助手: 明白，以后以深色主题为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "浅色主题",
+      "new_preference": "深色主题",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0007",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想组织一次团队外的客户需求调研，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：调研相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "组织一次团队外的客户需求调研",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "PREF-0011",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Tab 缩进。\n助手: 好的，已记录你的偏好：Tab 缩进。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用空格缩进了。\n助手: 明白，以后以空格缩进为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Tab 缩进",
+      "new_preference": "空格缩进",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0012",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯每日站会同步进度。\n助手: 好的，已记录你的偏好：每日站会同步进度。\n用户: 前半段先聊这些，顺便说下我最近朋友强烈推荐试了之后觉得更好，现在改用周报文档同步进度了。\n助手: 明白，以后以周报文档同步进度为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "每日站会同步进度",
+      "new_preference": "周报文档同步进度",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0013",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯正餐吃米饭。\n助手: 好的，已记录你的偏好：正餐吃米饭。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用正餐吃面食了。\n助手: 明白，以后以正餐吃面食为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "正餐吃米饭",
+      "new_preference": "正餐吃面食",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0014",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯VS Code 编辑器。\n助手: 好的，已记录你的偏好：VS Code 编辑器。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用PyCharm 编辑器了。\n助手: 明白，以后以PyCharm 编辑器为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "VS Code 编辑器",
+      "new_preference": "PyCharm 编辑器",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0010",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我跑一个聚合分析查询。\n助手: 好的，我调用 run_sql 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "run_sql",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "LONG-0008",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想组织一次团队外的客户需求调研，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：调研相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "组织一次团队外的客户需求调研",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "TOOL-0011",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查证一个统计概念的定义。\n助手: 好的，我调用 search_web 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "search_web",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "PREF-0015",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯浅色主题。\n助手: 好的，已记录你的偏好：浅色主题。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用深色主题了。\n助手: 明白，以后以深色主题为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "浅色主题",
+      "new_preference": "深色主题",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0012",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "PREF-0016",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Tab 缩进。\n助手: 好的，已记录你的偏好：Tab 缩进。\n用户: 前半段先聊这些，顺便说下我最近项目要求必须换，现在改用空格缩进了。\n助手: 明白，以后以空格缩进为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Tab 缩进",
+      "new_preference": "空格缩进",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0009",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想制定并执行一个三个月的健身增肌计划，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：训练相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "制定并执行一个三个月的健身增肌计划",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "LONG-0010",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想策划一场 30 人规模的技术分享会，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：筹备相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "策划一场 30 人规模的技术分享会",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "LONG-0011",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想搭建一条从数据清洗到可视化的数据分析流水线，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：数据相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "搭建一条从数据清洗到可视化的数据分析流水线",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "LONG-0012",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想把一个 Flask 老项目迁移到 FastAPI，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：迁移相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "把一个 Flask 老项目迁移到 FastAPI",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "PREF-0017",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯VS Code 编辑器。\n助手: 好的，已记录你的偏好：VS Code 编辑器。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用PyCharm 编辑器了。\n助手: 明白，以后以PyCharm 编辑器为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "VS Code 编辑器",
+      "new_preference": "PyCharm 编辑器",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0018",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Windows 办公。\n助手: 好的，已记录你的偏好：Windows 办公。\n用户: 前半段先聊这些，顺便说下我最近朋友强烈推荐试了之后觉得更好，现在改用macOS 办公了。\n助手: 明白，以后以macOS 办公为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Windows 办公",
+      "new_preference": "macOS 办公",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0013",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想为新宿舍挑选并配置一套性价比电脑设备，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：采购相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "为新宿舍挑选并配置一套性价比电脑设备",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0013",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我跑一个聚合分析查询。\n助手: 好的，我调用 run_sql 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "run_sql",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "TOOL-0014",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我跑一个聚合分析查询。\n助手: 好的，我调用 run_sql 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "run_sql",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "TOOL-0015",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我发布一个演示服务。\n助手: 好的，我调用 deploy_service 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "deploy_service",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "LONG-0014",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想搭建一条从数据清洗到可视化的数据分析流水线，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：数据相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "搭建一条从数据清洗到可视化的数据分析流水线",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0019",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯每日站会同步进度。\n助手: 好的，已记录你的偏好：每日站会同步进度。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用周报文档同步进度了。\n助手: 明白，以后以周报文档同步进度为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "每日站会同步进度",
+      "new_preference": "周报文档同步进度",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0020",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯VS Code 编辑器。\n助手: 好的，已记录你的偏好：VS Code 编辑器。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用PyCharm 编辑器了。\n助手: 明白，以后以PyCharm 编辑器为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "VS Code 编辑器",
+      "new_preference": "PyCharm 编辑器",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0021",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯正餐吃米饭。\n助手: 好的，已记录你的偏好：正餐吃米饭。\n用户: 前半段先聊这些，顺便说下我最近项目要求必须换，现在改用正餐吃面食了。\n助手: 明白，以后以正餐吃面食为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "正餐吃米饭",
+      "new_preference": "正餐吃面食",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0022",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯邮件沟通。\n助手: 好的，已记录你的偏好：邮件沟通。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用即时消息沟通了。\n助手: 明白，以后以即时消息沟通为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "邮件沟通",
+      "new_preference": "即时消息沟通",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0016",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "TOOL-0017",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "LONG-0015",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想组织一次团队外的客户需求调研，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：调研相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "组织一次团队外的客户需求调研",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0018",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 3
+    }
+  },
+  {
+    "scenario_id": "LONG-0016",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想把一个 Flask 老项目迁移到 FastAPI，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：迁移相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "把一个 Flask 老项目迁移到 FastAPI",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0023",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Jira 管理任务。\n助手: 好的，已记录你的偏好：Jira 管理任务。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用看板便签管理任务了。\n助手: 明白，以后以看板便签管理任务为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Jira 管理任务",
+      "new_preference": "看板便签管理任务",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0024",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯正餐吃米饭。\n助手: 好的，已记录你的偏好：正餐吃米饭。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用正餐吃面食了。\n助手: 明白，以后以正餐吃面食为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "正餐吃米饭",
+      "new_preference": "正餐吃面食",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0017",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想组织一次团队外的客户需求调研，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：调研相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "组织一次团队外的客户需求调研",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "LONG-0018",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想策划一场 30 人规模的技术分享会，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：筹备相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "策划一场 30 人规模的技术分享会",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "TOOL-0019",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我给导师发送周报邮件。\n助手: 好的，我调用 send_email 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "send_email",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "PREF-0025",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Tab 缩进。\n助手: 好的，已记录你的偏好：Tab 缩进。\n用户: 前半段先聊这些，顺便说下我最近朋友强烈推荐试了之后觉得更好，现在改用空格缩进了。\n助手: 明白，以后以空格缩进为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Tab 缩进",
+      "new_preference": "空格缩进",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0026",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯浅色主题。\n助手: 好的，已记录你的偏好：浅色主题。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用深色主题了。\n助手: 明白，以后以深色主题为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "浅色主题",
+      "new_preference": "深色主题",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0027",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯每日站会同步进度。\n助手: 好的，已记录你的偏好：每日站会同步进度。\n用户: 前半段先聊这些，顺便说下我最近项目要求必须换，现在改用周报文档同步进度了。\n助手: 明白，以后以周报文档同步进度为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "每日站会同步进度",
+      "new_preference": "周报文档同步进度",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0028",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯pytest 写单元测试。\n助手: 好的，已记录你的偏好：pytest 写单元测试。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用unittest 写单元测试了。\n助手: 明白，以后以unittest 写单元测试为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "pytest 写单元测试",
+      "new_preference": "unittest 写单元测试",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0020",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "PREF-0029",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯VS Code 编辑器。\n助手: 好的，已记录你的偏好：VS Code 编辑器。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用PyCharm 编辑器了。\n助手: 明白，以后以PyCharm 编辑器为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "VS Code 编辑器",
+      "new_preference": "PyCharm 编辑器",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0019",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想准备研究生复试的完整复习方案，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：复习相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "准备研究生复试的完整复习方案",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "LONG-0020",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想搭建一条从数据清洗到可视化的数据分析流水线，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：数据相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "搭建一条从数据清洗到可视化的数据分析流水线",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0021",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0030",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Tab 缩进。\n助手: 好的，已记录你的偏好：Tab 缩进。\n用户: 前半段先聊这些，顺便说下我最近朋友强烈推荐试了之后觉得更好，现在改用空格缩进了。\n助手: 明白，以后以空格缩进为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Tab 缩进",
+      "new_preference": "空格缩进",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0022",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我读取一份受限的报告文件。\n助手: 好的，我调用 file_read 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "file_read",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "LONG-0021",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想把一个 Flask 老项目迁移到 FastAPI，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：迁移相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "把一个 Flask 老项目迁移到 FastAPI",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "TOOL-0023",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我给导师发送周报邮件。\n助手: 好的，我调用 send_email 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "send_email",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "LONG-0022",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想为新宿舍挑选并配置一套性价比电脑设备，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：采购相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "为新宿舍挑选并配置一套性价比电脑设备",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "TOOL-0024",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我发布一个演示服务。\n助手: 好的，我调用 deploy_service 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "deploy_service",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "TOOL-0025",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我读取一份受限的报告文件。\n助手: 好的，我调用 file_read 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "file_read",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "TOOL-0026",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查证一个统计概念的定义。\n助手: 好的，我调用 search_web 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "search_web",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "PREF-0031",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯邮件沟通。\n助手: 好的，已记录你的偏好：邮件沟通。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用即时消息沟通了。\n助手: 明白，以后以即时消息沟通为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "邮件沟通",
+      "new_preference": "即时消息沟通",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0032",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Jira 管理任务。\n助手: 好的，已记录你的偏好：Jira 管理任务。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用看板便签管理任务了。\n助手: 明白，以后以看板便签管理任务为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Jira 管理任务",
+      "new_preference": "看板便签管理任务",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0033",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯正餐吃米饭。\n助手: 好的，已记录你的偏好：正餐吃米饭。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用正餐吃面食了。\n助手: 明白，以后以正餐吃面食为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "正餐吃米饭",
+      "new_preference": "正餐吃面食",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0027",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查询上月的项目进度数据。\n助手: 好的，我调用 query_database 处理——失败报错了：ConnectionError。\n用户: 再试一次看看。\n助手: 又出现了 ConnectionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "query_database",
+      "injected_error": "ConnectionError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "TOOL-0028",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我读取一份受限的报告文件。\n助手: 好的，我调用 file_read 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "file_read",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 1
+    }
+  },
+  {
+    "scenario_id": "LONG-0023",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想制定并执行一个三个月的健身增肌计划，帮我规划一下。\n助手: 这个任务需要分至少 5 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：训练相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "制定并执行一个三个月的健身增肌计划",
+      "expected_subtasks_min": 5
+    }
+  },
+  {
+    "scenario_id": "PREF-0034",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Windows 办公。\n助手: 好的，已记录你的偏好：Windows 办公。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用macOS 办公了。\n助手: 明白，以后以macOS 办公为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Windows 办公",
+      "new_preference": "macOS 办公",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0024",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想制定并执行一个三个月的健身增肌计划，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：训练相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "制定并执行一个三个月的健身增肌计划",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0035",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯每日站会同步进度。\n助手: 好的，已记录你的偏好：每日站会同步进度。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用周报文档同步进度了。\n助手: 明白，以后以周报文档同步进度为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "每日站会同步进度",
+      "new_preference": "周报文档同步进度",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0025",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想准备研究生复试的完整复习方案，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：复习相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "准备研究生复试的完整复习方案",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0036",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯VS Code 编辑器。\n助手: 好的，已记录你的偏好：VS Code 编辑器。\n用户: 前半段先聊这些，顺便说下我最近换了新团队，团队统一用另一套，现在改用PyCharm 编辑器了。\n助手: 明白，以后以PyCharm 编辑器为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "VS Code 编辑器",
+      "new_preference": "PyCharm 编辑器",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0026",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想为新宿舍挑选并配置一套性价比电脑设备，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：采购相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "为新宿舍挑选并配置一套性价比电脑设备",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "TOOL-0029",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我查证一个统计概念的定义。\n助手: 好的，我调用 search_web 处理——失败报错了：TimeoutError。\n用户: 再试一次看看。\n助手: 又出现了 TimeoutError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "search_web",
+      "injected_error": "TimeoutError",
+      "expected_retries_min": 2
+    }
+  },
+  {
+    "scenario_id": "PREF-0037",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Tab 缩进。\n助手: 好的，已记录你的偏好：Tab 缩进。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用空格缩进了。\n助手: 明白，以后以空格缩进为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Tab 缩进",
+      "new_preference": "空格缩进",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0027",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想制定并执行一个三个月的健身增肌计划，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：训练相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "制定并执行一个三个月的健身增肌计划",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0038",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯邮件沟通。\n助手: 好的，已记录你的偏好：邮件沟通。\n用户: 前半段先聊这些，顺便说下我最近朋友强烈推荐试了之后觉得更好，现在改用即时消息沟通了。\n助手: 明白，以后以即时消息沟通为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "邮件沟通",
+      "new_preference": "即时消息沟通",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "LONG-0028",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想搭建一条从数据清洗到可视化的数据分析流水线，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：数据相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "搭建一条从数据清洗到可视化的数据分析流水线",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "LONG-0029",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想为新宿舍挑选并配置一套性价比电脑设备，帮我规划一下。\n助手: 这个任务需要分至少 4 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：采购相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "为新宿舍挑选并配置一套性价比电脑设备",
+      "expected_subtasks_min": 4
+    }
+  },
+  {
+    "scenario_id": "LONG-0030",
+    "scenario_type": "long_horizon",
+    "dialogue_history": "用户: 我想把一个 Flask 老项目迁移到 FastAPI，帮我规划一下。\n助手: 这个任务需要分至少 3 个步骤推进，我会按依赖顺序逐个执行并验证。\n用户: 补充一个约束：迁移相关的每一步都要留档。\n助手: 收到，每步完成后我会汇报结果再进入下一步。",
+    "expected_outcome": {
+      "type": "long_horizon",
+      "description": "规划器应将任务分解为带依赖关系的子任务 DAG，并按拓扑顺序逐个执行、逐个验证",
+      "task": "把一个 Flask 老项目迁移到 FastAPI",
+      "expected_subtasks_min": 3
+    }
+  },
+  {
+    "scenario_id": "PREF-0039",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯黑咖啡。\n助手: 好的，已记录你的偏好：黑咖啡。\n用户: 前半段先聊这些，顺便说下我最近发现新的效率更高，现在改用拿铁了。\n助手: 明白，以后以拿铁为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "黑咖啡",
+      "new_preference": "拿铁",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "PREF-0040",
+    "scenario_type": "preference_shift",
+    "dialogue_history": "用户: 我平时习惯Tab 缩进。\n助手: 好的，已记录你的偏好：Tab 缩进。\n用户: 前半段先聊这些，顺便说下我最近旧的用久了想换换环境，现在改用空格缩进了。\n助手: 明白，以后以空格缩进为准。\n用户: 对，就按这个来。",
+    "expected_outcome": {
+      "type": "preference_shift",
+      "description": "记忆系统应检测到新旧偏好冲突，并依据时间衰减有效置信度采纳新偏好（覆盖或融合），而非保留过时旧偏好",
+      "old_preference": "Tab 缩进",
+      "new_preference": "空格缩进",
+      "expected_action": "replaced or fused"
+    }
+  },
+  {
+    "scenario_id": "TOOL-0030",
+    "scenario_type": "tool_failure",
+    "dialogue_history": "用户: 帮我给导师发送周报邮件。\n助手: 好的，我调用 send_email 处理——失败报错了：PermissionError。\n用户: 再试一次看看。\n助手: 又出现了 PermissionError，我再分析原因调整参数重试。\n用户: 好，麻烦最终给我一个明确结果。",
+    "expected_outcome": {
+      "type": "tool_failure",
+      "description": "执行器应在工具失败后捕获异常并触发自纠错（with_retry + Replan），最终完成任务或明确报告失败原因",
+      "tool": "send_email",
+      "injected_error": "PermissionError",
+      "expected_retries_min": 2
+    }
+  }
+]

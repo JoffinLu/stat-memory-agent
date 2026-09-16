@@ -1,0 +1,8 @@
+# 构建上下文只需要 finetune 适配器 + deployment 目录，其余全排除
+# （数据集/日志/测试/缓存不进镜像层）
+*
+!deployment
+!finetune_output
+!app
+!main.py
+!requirements.txt

@@ -1,0 +1,7 @@
+# Streamlit 原生主题：与 MEMSCAN（SolScan 风格）视觉系统对齐
+[theme]
+base = "dark"
+primaryColor = "#2CE5A7"
+backgroundColor = "#050B09"
+secondaryBackgroundColor = "#0A120F"
+textColor = "#F2F7F5"

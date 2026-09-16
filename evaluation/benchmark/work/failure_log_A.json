@@ -1,0 +1,1754 @@
+[
+  {
+    "task_id": "GR-transient-022",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.892691+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943320+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943367+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943392+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943410+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943428+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943445+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943460+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943474+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-009",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:58.943489+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000372+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000457+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000485+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000507+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000526+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000543+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000559+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000575+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-014",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.000592+00:00"
+  },
+  {
+    "task_id": "GR-transient-024",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.031572+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-transient-027",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.062969+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093366+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093408+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093431+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093451+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093469+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093487+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093505+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093521+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-005",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.093537+00:00"
+  },
+  {
+    "task_id": "GR-transient-018",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.122244+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153362+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153404+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153427+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153446+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153463+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153479+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153494+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153510+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-001",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.153526+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182068+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182193+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182275+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182341+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182416+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182468+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182528+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182583+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-000",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.182632+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214256+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214310+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214347+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214367+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214394+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214417+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214443+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214490+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-012",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.214519+00:00"
+  },
+  {
+    "task_id": "GR-transient-025",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.246896+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.277998+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278039+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278063+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278082+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278100+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278117+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278133+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278150+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-006",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.278166+00:00"
+  },
+  {
+    "task_id": "GR-transient-026",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.308481+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338092+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338133+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338158+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338176+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338193+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338212+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338230+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338246+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-007",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.338262+00:00"
+  },
+  {
+    "task_id": "GR-transient-029",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.370421+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-transient-028",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.399976+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-transient-021",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.430590+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461341+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461385+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461410+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461429+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461446+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461463+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461478+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461496+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-003",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.461512+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491776+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491822+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491848+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491869+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491887+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491906+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491924+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491941+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-004",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.491957+00:00"
+  },
+  {
+    "task_id": "GR-transient-023",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.521899+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553841+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553884+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553907+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553926+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553944+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553961+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553977+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.553993+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-008",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.554008+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585707+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585756+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585779+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585798+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585816+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585833+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585850+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585865+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-015",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.585879+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616819+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616864+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616888+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616908+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616927+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616944+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616960+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616976+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-013",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.616990+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647008+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647049+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647074+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647093+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647117+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647133+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647148+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647164+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-010",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.647180+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679183+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679225+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679250+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679270+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679287+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679308+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679324+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679340+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-017",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.679355+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712524+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712570+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712594+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712614+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712631+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712647+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712663+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712678+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-002",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.712699+00:00"
+  },
+  {
+    "task_id": "GR-transient-020",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.743800+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.773947+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.773995+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774020+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774039+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774055+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774098+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774136+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774160+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-016",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.774189+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #1)",
+    "retry_count": 0,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804244+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 2,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #2)",
+    "retry_count": 1,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804285+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 3,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #3)",
+    "retry_count": 2,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804308+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 4,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #4)",
+    "retry_count": 3,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804326+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 5,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #5)",
+    "retry_count": 4,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804344+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 6,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #6)",
+    "retry_count": 5,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804360+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 7,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #7)",
+    "retry_count": 6,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804376+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 8,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #8)",
+    "retry_count": 7,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804391+00:00"
+  },
+  {
+    "task_id": "GR-hopeless-011",
+    "failed_step": 9,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "RuntimeError: dependency missing (call #9)",
+    "retry_count": 8,
+    "final_success": false,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.804408+00:00"
+  },
+  {
+    "task_id": "GR-transient-019",
+    "failed_step": 1,
+    "action": "args=('payload',), kwargs={}",
+    "error_reason": "ValueError: transient network glitch",
+    "retry_count": 0,
+    "final_success": true,
+    "revised_params": null,
+    "timestamp": "2026-09-15T15:52:59.836064+00:00",
+    "resolved_action": "args=('payload',), kwargs={}"
+  }
+]

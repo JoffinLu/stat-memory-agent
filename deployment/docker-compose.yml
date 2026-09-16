@@ -1,0 +1,31 @@
+# vLLM 一键部署（NVIDIA GPU）：
+#   docker compose up -d --build
+# 服务起后 OpenAI 兼容端点: http://localhost:8000/v1
+
+services:
+  vllm:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    image: sma-vllm
+    container_name: sma-vllm
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      SERVED_MODEL_NAME: Qwen2.5-7B-Instruct
+      MAX_MODEL_LEN: "4096"
+      GPU_MEMORY_UTILIZATION: "0.90"
+    volumes:
+      # 模型已内置镜像，无需要挂载；如需调整运行参数改这里或上面 environment
+      - vllm_cache:/root/.cache/vllm
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  vllm_cache:

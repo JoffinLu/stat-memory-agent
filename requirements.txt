@@ -1,0 +1,32 @@
+# ---------- Web 框架 ----------
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+
+# ---------- LLM 与智能体编排 ----------
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+transitions>=0.9.0
+
+# ---------- 向量存储与检索 ----------
+chromadb>=0.5.0
+rank-bm25>=0.2.2
+
+# ---------- 统计与机器学习 ----------
+numpy>=1.26.0
+scipy>=1.13.0
+scikit-learn>=1.5.0
+matplotlib>=3.8.0
+
+# ---------- 微调（可选，仅 GPU 训练环境需要） ----------
+# torch / transformers / peft / trl / datasets / bitsandbytes / accelerate
+# 按 CUDA 版本单独安装 torch，此处不锁版本
+
+# ---------- 状态机 ----------
+transitions>=0.9.0
+
+# ---------- 测试（dev） ----------
+pytest>=8.0.0
+httpx>=0.27.0

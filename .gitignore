@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+_pytest_tmp_*/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 运行产物
+logs/
+*.log
+
+# 诊断截图（开发过程产物，不入库）
+screenshots/
+
+# IDE
+.idea/
+.vscode/
